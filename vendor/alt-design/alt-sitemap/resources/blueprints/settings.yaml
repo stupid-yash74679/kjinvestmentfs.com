@@ -1,0 +1,124 @@
+title: Settings
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Collections
+        fields:
+          -
+            handle: default_collection_priorities
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    collection_priority:
+                      display: 'Collection Priority'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: collection
+                          field:
+                            max_items: 1
+                            mode: select
+                            type: collections
+                            display: Collection
+                            icon: collections
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: priority
+                          field:
+                            type: float
+                            display: Priority
+                            icon: float
+                            instructions: 'From 0.0 (lowest priority) to 1.0 (highest priority)'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: 'Default Collection Priorities'
+              instructions: 'Select a collection and add a default sitemap priority for the entire collection'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: exclude_collections_from_sitemap
+            field:
+              type: collections
+              display: 'Exclude Collections from Sitemap'
+      -
+        display: Taxonomies
+        fields:
+          -
+            handle: default_taxonomy_priorities
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    taxonomy_priority:
+                      display: 'Taxonomy Priority'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: taxonomy
+                          field:
+                            mode: default
+                            type: taxonomies
+                            display: Taxonomy
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: priority
+                          field:
+                            type: float
+                            display: Priority
+                            instructions: 'From 0.0 (lowest priority) to 1.0 (highest priority)'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: 'Default Taxonomy Priorities'
+              instructions: 'Select a Taxonomy and add a default sitemap priority for the entire Taxonomy'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: exclude_taxonomies_from_sitemap
+            field:
+              mode: default
+              type: taxonomies
+              display: 'Exclude Taxonomies from Sitemap'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
