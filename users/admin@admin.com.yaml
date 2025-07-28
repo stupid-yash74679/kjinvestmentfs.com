@@ -1,0 +1,8 @@
+name: admin
+super: true
+id: 95324867-c5d1-4d1f-846c-cf3c3bea1e5c
+password_hash: $2y$12$8AgZYMSCKxAvJI46RzcfXOhpoIA8kIYcc04q3m1mh/tgmZ9Ev9dma
+preferences:
+  collections:
+    services:
+      after_save: create_another
